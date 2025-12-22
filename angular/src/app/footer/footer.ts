@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.css'],
 })
 export class Footer {
+  count:number=0;
+  handlePlus(){
+    if(this.count>=10) return;
+    this.count++;
+  }
+  handleMinus(){
+    if(this.count<=0) return;
+    this.count--;
+  }
 
 }

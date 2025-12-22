@@ -1,0 +1,23 @@
+div{
+  flex: auto;
+  font: 100;
+  font-size: 20px;
+  margin: 5px;
+}
+h2{
+margin-left: 90px;
+}
+button{
+  background-color: aquamarine;
+  color: brown;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5px;
+  margin: 2px;
+}
+
+p{
+  margin: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
