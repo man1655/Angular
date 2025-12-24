@@ -1,0 +1,34 @@
+.d{
+  height: 200px;
+  width: 200px;
+  margin: 4px;
+}
+.d1{
+  background-color: red;
+}
+.d2{
+  background-color: green;
+}
+.d3{
+  background-color: blue;
+}
+.d4{
+  background-color: pink;
+}
+.main{
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  gap: 5px;
+}
+.btn button{
+  padding: 8px;
+  width: 120px;
+  height: 30px;
+  font-weight: 600;
+  font-size: medium;
+}

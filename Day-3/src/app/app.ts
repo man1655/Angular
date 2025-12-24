@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Profile } from './profile/profile';
+import { Color } from './color/color';
 
 @Component({
   selector: 'app-root',
-  imports: [Profile],
+  imports: [Profile,Color],
   standalone:true,
   templateUrl: './app.html',
   styleUrl: './app.css'
