@@ -1,0 +1,24 @@
+<button (click)='handleEvent($event)'>Click Me For Nothing</button>
+<br/>
+<div (mouseenter)='handleEvent($event)' class='green'>
+
+</div>
+
+<div (mouseleave)='handleEvent($event)' class='blue'>
+
+</div>
+<br/>
+
+<h2>{{name}}</h2>
+<input (input)='handleSubmit($event)' type="text">
+<br>
+<br>
+<button>Submit</button>
+<hr>
+<hr>
+<h2>{{Email}}</h2>
+<input type="email" value="Email" placeholder='enter your Email' #EmailField>
+<br>
+<br>
+<button (click)='handleTemplate(EmailField.value)'>Submit</button>
+<button (click)='setval(EmailField)'>Set value</button>
