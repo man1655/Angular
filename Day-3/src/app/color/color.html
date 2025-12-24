@@ -1,29 +1,24 @@
-<div class='btn'>
-  <button (click)='setColor(1)'>Red</button>
-  <button (click)='setColor(2)'>green</button>
-  <button  (click)='setColor(3)' >blue</button>
-  <button (click)='setColor(4)'>pink</button>
+<div class="btn">
+  <button (click)="setColor(1)">Red</button>
+  <button (click)="setColor(2)">green</button>
+  <button (click)="setColor(3)">blue</button>
+  <button (click)="setColor(4)">pink</button>
 </div>
 
-<div class='main'>
-
-@if(color===1){
-<div class='d d1'>
-
+<div class="main">
+  @if(color===1){
+  <div class="d d1"></div>
+  } @else if(color===2){
+  <div class="d d2"></div>
+  } @else if(color===3){
+  <div class="d d3"></div>
+  } @else{
+  <div class="d d4"></div>
+  }
 </div>
+
+@for(student of students;track student){
+  <h2>{{student.name}}</h2>
+  <h2>{{student.age}}</h2>
+
 }
-@else if(color===2){
-<div class='d d2'>
-
-</div>
-}
-@else if(color===3){
-<div class='d d3'>
-
-</div>
-}
-@else{
-<div class='d d4'>
-</div>
-}
-</div>
