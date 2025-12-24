@@ -1,0 +1,23 @@
+<button (click)="toggleProfile()">
+  CLICK ME TO TOGGLE PROFILE
+</button> 
+
+@if (showProfile) {
+  <div class="d">
+    hello
+  </div>
+}
+
+<hr>
+
+<button (click)="changeDiv()">
+  Click Me to Change Div
+</button>
+
+@if(toggleDiv){
+  <div class="d-1">Green</div>
+}@else{
+  <div class="d-2">Red</div>
+}
+
+

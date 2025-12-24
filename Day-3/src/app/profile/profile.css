@@ -1,0 +1,25 @@
+.d {
+  height: 120px;
+  width: 200px;
+  background-color: aqua;
+}
+
+.d-1 {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background: green;
+ border-radius: 24px;
+}
+
+.d-2 {
+  height: 100px;
+  width: 100px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}

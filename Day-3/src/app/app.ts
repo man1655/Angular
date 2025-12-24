@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { Profile } from './profile/profile';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Profile],
+  standalone:true,
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -15,8 +17,6 @@ export class App {
     handleSubmit(event:Event){
       this.name=(event.target as HTMLInputElement).value
     }
-
-
 
     handleTemplate(value:any){
       this.Email=value
