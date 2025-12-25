@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-    count = signal(0);
+  count = signal(0);
     handleCount(t:string){
       if(t=='inc'){
       this.count.set(this.count()+1);
