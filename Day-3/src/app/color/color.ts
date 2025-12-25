@@ -15,5 +15,5 @@ setColor(val:number){
   {name:'ankit',age:20},
   {name:'pankhu',age:30},
   {name:'jaa',age:35}
-]
+]  
 }
