@@ -1,15 +1,15 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
+import { Cfor } from './cfor/cfor';
+import { Todo } from './todo/todo';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Cfor,Todo],
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-
-
   constructor(){
     effect(()=>{
       if(this.count()===2){

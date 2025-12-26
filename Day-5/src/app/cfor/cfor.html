@@ -1,0 +1,15 @@
+@for (user of users; track user.name; let i = $index; let f = $first; let l = $last) {
+  @if ($odd) {
+    <p style="color: red;">
+      index is {{ i+1 }} and name is {{ user.name }} and age is {{ user.age }}
+    </p>
+  } @else {
+    <p style="color: green;">
+      index is {{ i+1 }} and name is {{ user.name }} and age is {{ user.age }}
+    </p>
+  }
+}
+
+<input [(ngModel)]='name' type="text" placeholder="Enter name to search" />
+
+<h1>{{name}}</h1>

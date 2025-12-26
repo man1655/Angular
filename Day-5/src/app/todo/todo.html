@@ -1,0 +1,19 @@
+<h2
+[style.backgroundColor]='backgroundColor'
+[style.fontSize.pt]='fontSize'
+[style.margin.pt]='margin'
+>TODO LIST</h2>
+
+<input [(ngModel)]='task' type="text" placeholder='Enter you task'>
+<button (click)='handlesubmit()' type='submit'>Submit</button>
+@for(task of taskList;track taskList){
+  <div class='d1'>
+  <p >{{task.id}}</p>
+  <p>{{task.task}}</p>
+  <button (click)='handelDelete(task.id)'>delete</button>
+  </div>
+}
+
+
+
+
