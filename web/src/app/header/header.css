@@ -1,0 +1,25 @@
+.main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 30px;
+}
+.list{
+  display: flex;
+  width: 300px;
+  justify-content: space-evenly;
+  font-size:large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+}
+a{
+  text-decoration: none;
+}
+li{
+list-style: none;
+}
+.active{
+background-color: rgb(206, 216, 10);
+border-radius: 10px;
+padding: 10px;
+}
