@@ -7,12 +7,16 @@
 <input [(ngModel)]='task' type="text" placeholder='Enter you task'>
 <button (click)='handlesubmit()' type='submit'>Submit</button>
 @for(task of taskList;track taskList){
-  <div class='d1'>
+  <div  class='d1'>
   <p >{{task.id}}</p>
   <p>{{task.task}}</p>
   <button (click)='handelDelete(task.id)'>delete</button>
   </div>
 }
+
+<div *ngIf="show">
+  Hello
+</div>
 
 
 

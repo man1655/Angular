@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +12,7 @@ export class Todo {
   backgroundColor='blue';
   fontSize=20;
   margin=15;
+  show=true;
 
   task='';
   taskList:{id:number,task:string}[]=[];
