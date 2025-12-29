@@ -6,7 +6,7 @@
   <br><br>
   <input type="text" placeholder="Last Name" formControlName="lastName" />
   <span  *ngIf="lastName?.hasError('required')">*</span>
-  <span class='err'  *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">Plz Enter Valid</span>
+  <span class='err '  *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">Plz Enter Valid</span>
 
   <br><br>
   <button type="submit">Submit</button>
