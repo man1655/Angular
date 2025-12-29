@@ -1,0 +1,10 @@
+<h2>Form-Group</h2>
+<form [formGroup]="LoginForm" (ngSubmit)='submitForm()'>
+  <br><br>
+  <input type="text" placeholder="First Name" formControlName='firstName' />
+  <br><br>
+  <input type="text" placeholder="Last Name" formControlName="lastName" />
+  <br><br>
+  <button type="submit">Submit</button>
+  <button type='button' (click)='setValue()'>Set Value</button>
+</form>

@@ -1,0 +1,13 @@
+<h2>Form</h2>
+<form action="" method="post">
+  <input type="text" placeholder="Enter your name" [formControl]="name" />
+  <br>
+  <br>
+  <input type="password" placeholder='Enter Your Password' [formControl]="password">
+  <br><br>
+  <button (click)='submitform()' type="button">Submit</button>
+  <br><br>
+  {{name.value}}
+  <br>
+  {{password.value}}
+</form>
