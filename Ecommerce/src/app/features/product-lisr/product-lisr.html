@@ -1,36 +1,29 @@
-<h1 class=" text-center text-2xl font-bold mb-4">Product List</h1>
-<button class='ml-4 text-center px-4 py-2 bg-blue-500 text-white rounded' routerLink='/addProducts'>Add</button>
-
-
+<h1 class="text-center text-2xl font-bold mb-4">Product List</h1>
+<button class="ml-4 text-center px-4 py-2 bg-blue-500 text-white rounded" routerLink="/addProducts">
+  Add
+</button>
 
 @if (products().length === 0) {
-  <p>No products available</p>
-} @else {
+<p>No products available</p>
+} @else { @for (product of products(); track product.id) {
+<div class="border p-3 mb-2 rounded">
+  <h3>{{ product.name }}</h3>
+  <p>Price: ₹{{ product.price }}</p>
 
-  @for (product of products(); track product.id) {
-    <div class="border p-3 mb-2 rounded">
-      <h3>{{ product.name }}</h3>
-      <p>Price: ₹{{ product.price }}</p>
-
-      @if (product.stock) {
-        <span class="text-green-600">In Stock</span>
-      } @else {
-        <span class="text-red-600">Out of Stock</span>
-      }
-
-      <br />
-
-      <a class="mt-2 px-3 py-1 bg-blue-500 text-white rounded" routerLink='/products/{{product.id}}'>
-        View Details
-
-      </a>
-
-      @if (selectedProductId() === product.id) {
-        <p class="mt-2 text-sm text-gray-600">
-          ✅ Selected Product ID: {{ product.id }}
-        </p>
-      }
-
-    </div>
+  @if (product.stock) {
+  <span class="text-green-600">In Stock</span>
+  } @else {
+  <span class="text-red-600">Out of Stock</span>
   }
-}
+
+  <br />
+
+  <a class="mt-2 px-3 py-1 bg-blue-500 text-white rounded" routerLink="/products/{{ product.id }}">
+    View Details
+  </a>
+
+  @if (selectedProductId() === product.id) {
+  <p class="mt-2 text-sm text-gray-600">✅ Selected Product ID: {{ product.id }}</p>
+  }
+</div>
+} }
