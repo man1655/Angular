@@ -1,3 +1,18 @@
 <h1>products List</h1>
 <app-products [products]='message'></app-products>
 <app-products [users]='users'></app-products>
+
+
+<app-products
+(sendProducts)='getProductsFromChild($event)'
+></app-products>
+
+<h3>Products received from child:</h3>
+
+@for (item of receivedProd; track item) {
+  <p>{{item.name}} - ₹{{item.price}}</p>
+}
+
+
+
+

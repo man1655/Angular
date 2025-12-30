@@ -17,7 +17,10 @@ export class ProductList {
     {
       name:'sumit',
       age:22,
-
     }
   ]
+  receivedProd: { name: string; price: number }[] = [];
+  getProductsFromChild(data:any){
+    this.receivedProd=data;
+  }
 }
