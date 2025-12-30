@@ -17,11 +17,10 @@
 
       <br />
 
-      <button
-        (click)="selectProduct(product.id)"
-        class="mt-2 px-3 py-1 bg-blue-500 text-white rounded">
+      <a class="mt-2 px-3 py-1 bg-blue-500 text-white rounded" routerLink='/products/{{product.id}}'>
         View Details
-      </button>
+
+      </a>
 
       @if (selectedProductId() === product.id) {
         <p class="mt-2 text-sm text-gray-600">
