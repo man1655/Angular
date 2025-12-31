@@ -3,3 +3,6 @@
   <h2>{{p.id}}</h2>
   <h2>{{p.name}}</h2>
 }
+@for (q of quiz; track $index) {
+  <p>{{ q.question }}</p>
+}
