@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": "aedb",
+      "name": "janvi"
+    },
+    {
+      "id": "9a3f",
+      "name": "janvi"
+    },
+    {
+      "name": "fcfcgc",
+      "id": "5c3d"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

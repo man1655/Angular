@@ -1,0 +1,20 @@
+<h1>Hel</h1>
+
+<form #userForm="ngForm" (ngSubmit)='addUser(userForm.value)'>
+  <input type="text" name="name" [ngModel]='selectedUser?.name' placeholder="Enter Name"/>
+  <br><br>
+  @if(!selectedUser){
+  <button type="Submit">Add User</button>
+  }@else{
+    <button type='Submit'>Update User</button>
+  }
+</form>
+
+
+
+
+@for(d of data;track d.id){
+  <p>{{d.id}} - {{d.name}}</p>
+  <button (click)='deletUser(d.id)'>Delete</button>
+  <button (click)='updateUser(d.id)'>Update</button>
+}
