@@ -1,0 +1,8 @@
+<h1>Home</h1>
+<button (click)='submit()'>Submit</button>
+<br><br><br>
+<form [formGroup]='loginForm' (ngSubmit)='submit()'>
+  <input type="text" formControlName='name'>
+  <input type="text">
+</form>
+<a routerLink='/profile'>Profile</a>
