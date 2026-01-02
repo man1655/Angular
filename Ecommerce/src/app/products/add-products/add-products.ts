@@ -24,6 +24,7 @@ export class AddProducts {
   })
 
   addProduct(){
+    debugger;
     if(this.productForm.invalid){
       return;
     }else{
