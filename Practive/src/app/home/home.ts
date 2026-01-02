@@ -28,7 +28,6 @@ export class Home {
       ],
       rememberMe: [false]
     });
-
   }
 
   submit() {
