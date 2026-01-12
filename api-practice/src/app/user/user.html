@@ -1,22 +1,27 @@
 <h2>User Management</h2>
 
-<form [formGroup]='userForm' (ngSubmit)='submitForm()'>
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+  <!-- Name -->
   <input formControlName="name" placeholder="Name" />
+  @if(name?.touched && name?.invalid){
+  <small style="color: red"> name is required </small>
+  }
+
   <input formControlName="email" placeholder="Email" />
+  @if(email?.touched && email?.invalid ){
+  <small style="color: red"> Enter Valid Email </small>
+  }
   <input formControlName="phone" placeholder="Phone" />
-  <button type='submit'>
-    {{
-      editingUserId?'update':'add'
-    }}
+  <button type="submit">
+    {{ editingUserId ? 'update' : 'add' }}
   </button>
 </form>
 
 <h1>Users List</h1>
 @if(loading){
- <h1>loading ...</h1>
-}
-@for(user of users;track user.id){
-  <h2>{{user.name}}</h2>
-  <h2>{{user.email}}</h2>
-  <button (click)='deleteuser(user.id!)'>Delete</button>
+<h1>loading ...</h1>
+} @for(user of users;track user.id){
+<h2>{{ user.name }}</h2>
+<h2>{{ user.email }}</h2>
+<button (click)="deleteuser(user.id!)">Delete</button>
 }

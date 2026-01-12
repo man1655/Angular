@@ -31,14 +31,14 @@ export class User {
   async ngOnIt() {
     await this.loaduser();
   }
-  getname(){
-    return this.userForm.get('name')
+  get name() {
+    return this.userForm.get('name');
   }
-  getemail(){
-    return this.userForm.get('email')
+  get email() {
+    return this.userForm.get('email');
   }
-  getphone(){
-    return this.userForm.get('phone')
+  get phone() {
+    return this.userForm.get('phone');
   }
   async loaduser() {
     this.loading = true;
@@ -73,6 +73,7 @@ export class User {
 
   async submitForm() {
     if (this.userForm.invalid) {
+      this.userForm.markAllAsTouched();
       return;
     }
     const userData = this.userForm.value as user;
