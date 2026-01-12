@@ -1,0 +1,22 @@
+<h2>User Management</h2>
+
+<form [formGroup]='userForm' (ngSubmit)='submitForm()'>
+  <input formControlName="name" placeholder="Name" />
+  <input formControlName="email" placeholder="Email" />
+  <input formControlName="phone" placeholder="Phone" />
+  <button type='submit'>
+    {{
+      editingUserId?'update':'add'
+    }}
+  </button>
+</form>
+
+<h1>Users List</h1>
+@if(loading){
+ <h1>loading ...</h1>
+}
+@for(user of users;track user.id){
+  <h2>{{user.name}}</h2>
+  <h2>{{user.email}}</h2>
+  <button (click)='deleteuser(user.id!)'>Delete</button>
+}
