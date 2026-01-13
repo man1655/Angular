@@ -1,0 +1,15 @@
+<p>Task works!</p>
+
+@if (loading) {
+  <h2>Loading ...</h2>
+} @else if (tasks.length === 0) {
+  <h2>No tasks found</h2>
+} @else {
+  @for (task of tasks; track task.id) {
+    <div>
+      <h2>{{ task.todo }}</h2>
+      <h3>{{ task.completed ? "Completed" : "Remaining" }}</h3>
+    </div>
+  }
+}
+
