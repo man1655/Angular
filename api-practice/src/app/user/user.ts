@@ -12,6 +12,7 @@ import { email } from '@angular/forms/signals';
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
+
 export class User {
   users: user[] = [];
   loading = false;
@@ -37,7 +38,7 @@ export class User {
   get email() {
     return this.userForm.get('email');
   }
-  get phone() {
+  get   phone() {
     return this.userForm.get('phone');
   }
   async loaduser() {

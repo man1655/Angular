@@ -21,7 +21,7 @@ export class Task {
     this.loading=true;
     try{
       const response=await this.taskservices.getall();
-      this.tasks=response.todos;
+      this.tasks=response;
     }catch(err){
       console.log(err);
     }

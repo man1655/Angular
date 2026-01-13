@@ -40,5 +40,4 @@ export class UserService {
       this.http.delete<void>(`${this.baseUrl}${id}`)
     )
   }
-
 }
