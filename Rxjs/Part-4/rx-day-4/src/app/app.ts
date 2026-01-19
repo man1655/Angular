@@ -11,26 +11,25 @@ import { forkJoin, switchMap } from 'rxjs';
   styleUrl: './app.css',
 })
 export class App {
-
   http = inject(HttpClient);
-  searchControl=new FormControl();
+  searchControl = new FormControl();
 
+  user$ = this.http.get('https://jsonplaceholder.typicode.com/users');
+  post$ = this.http.get('https://jsonplaceholder.typicode.com/posts');
+  constructor() {
+    forkJoin([this.user$, this.post$]).subscribe(([users, post]: any) => {
+      console.log(users[0].name);
+      console.log(post[0].title);
+    });
 
-
-  user$=this.http.get('https://jsonplaceholder.typicode.com/users');
-  post$=this.http.get('https://jsonplaceholder.typicode.com/posts');
-  constructor(){
-    forkJoin([this.user$,this.post$]).subscribe(([users,post]:any)=>{
-      console.log(users[0].name)
-      console.log(post[0].title)
-    })
-
-     this.searchControl.valueChanges.pipe(
-      switchMap((search:string)=>this.http.get(
-        `https://dummyjson.com/products/search?q=${search}`
-      ))
-     ).subscribe((res)=>{
-console.log(res)
-     })
-}
+    this.searchControl.valueChanges
+      .pipe(
+        switchMap((search: string) =>
+          this.http.get(`https://dummyjson.com/products/search?q=${search}`),
+        ),
+      )
+      .subscribe((res) => {
+        console.log(res);
+      });
+  }
 }
